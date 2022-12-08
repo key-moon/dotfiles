@@ -1,11 +1,6 @@
 [user]
     email = kymn0116@gmail.com
     name = key-moon
-    signingkey = 52C47F1560E5D5B2
-[gpg]
-    program = gpg
-[commit]
-    gpgsign = true
 [core]
     autocrlf = input
 
