@@ -27,6 +27,8 @@ zstyle ':completion:*' menu select=5
 zstyle ':completion:*:descriptions' format '%BCompleting%b %U%d%u'
 # history
 setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt EXTENDED_HISTORY
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000000
@@ -66,6 +68,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 alias bat='batcat'
 alias cat='bat -pp'
+alias ccat='bat -f -pp'
+alias less='less -r'
 
 # path
 export PATH=$PATH:$HOME/tools
@@ -83,7 +87,6 @@ alias la='ls -A'
 alias l='ls -CF'
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias clp='xclip -selection c'
-alias tmux="$HOME/ghq/github.com/tmux/tmux/tmux"
 alias ghidra="$GHIDRA_INSTALL_DIR/ghidraRun"
 alias peco="peco --rcfile $HOME/.pecorc.json"
 
