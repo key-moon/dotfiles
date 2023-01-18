@@ -20,6 +20,7 @@ setopt AUTO_PUSHD
 # keybind
 bindkey -e
 # completion
+fpath=('/home/keymoon/ghq/github.com/key-moon/chq/misc/zsh' $fpath)
 zstyle :compinstall filename '/home/keymoon/.zshrc'
 autoload -Uz compinit
 compinit
@@ -33,7 +34,7 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=1000000
 function peco-select-history() {
-  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
+  BUFFER=$(history -n -r 1 | peco --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
@@ -42,7 +43,7 @@ bindkey '^r' peco-select-history
 # io
 setopt IGNORE_EOF
 # ghq
-function peco-src () {
+function peco-ghq () {
   local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
@@ -50,8 +51,23 @@ function peco-src () {
   fi
   zle clear-screen
 }
-zle -N peco-src
-bindkey '^g' peco-src
+zle -N peco-ghq
+bindkey '^g' peco-ghq
+# chq
+function peco-chq () {
+  local ctf=$(chq ctx ctf --hide-key 2> /dev/null)
+  if [ -n "$ctf" ]; then
+    local ctf="$ctf/"
+  fi
+  local selected_dir=$(chq list -p | peco --query "$ctf")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-chq
+bindkey '^f' peco-chq
 # ================= end config for zsh =================
 
 # ================ begin general config ================
@@ -76,7 +92,7 @@ export PATH=$PATH:$HOME/tools
 export PATH=$PATH:$HOME/.local/bin
 
 # environment variables
-export TERM=xterm-256color
+# export TERM=xterm-256color
 export ENVFILE_DIR=$HOME/.envfiles
 export ENVFILE_NAME=ctf.env.sh
 export GHIDRA_INSTALL_DIR=$HOME/bin/ghidra
@@ -89,6 +105,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias clp='xclip -selection c'
 alias ghidra="$GHIDRA_INSTALL_DIR/ghidraRun"
 alias peco="peco --rcfile $HOME/.pecorc.json"
+alias tgdb="gdb --nx -ix=~/.gdbinit_tmux"
 
 # tmux
 if [[ -n "$TMUX" ]] then
@@ -100,6 +117,7 @@ if [[ -n "$TMUX" ]] then
 fi
 # ================= end general config =================
 
-# ========= begin config added by application ==========
-[[ -s "/home/keymoon/.gvm/scripts/gvm" ]] && source "/home/keymoon/.gvm/scripts/gvm"
-# ========== end config added by application ===========
+# ============ begin config for application ============
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+[[ -s "$HOME/templates/.bin/init.zsh" ]] && source "$HOME/templates/.bin/init.zsh"
+# ============= end config for application =============

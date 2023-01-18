@@ -1,4 +1,4 @@
-source /home/keymoon/.pwndbg/gdbinit.py
+source ~/.pwndbg/gdbinit.py
 source ~/.pwngdb/pwngdb.py
 source ~/.pwngdb/angelheap/gdbinit.py
 

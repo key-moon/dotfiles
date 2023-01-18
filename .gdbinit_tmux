@@ -1,0 +1,24 @@
+source ~/.gdbinit
+
+source ~/.splitmind/gdbinit.py
+
+python
+import splitmind
+(splitmind.Mind()
+  .tell_splitter(show_titles=True)
+  .tell_splitter(set_title="Main")
+
+  # .left(display="backtrace", size="25%")
+  .left(cmd='tty; tail -f /dev/null', display="io", size="25%", clearing=False)
+    .tell_splitter(set_title='Input / Output')
+  .below(of="io", cmd="ptipython", size="30%")
+  
+  .above(of="main", display="disasm", size="80%")
+    .show("code", on="disasm", banner="none")
+  .right(of="disasm", display="regs", size="50%")
+  .below(of="regs", display="stack", size="50%")
+).build(nobanner=True)
+end
+set context-code-lines 30
+set context-source-code-lines 30
+set context-sections  "regs args code disasm stack backtrace"
