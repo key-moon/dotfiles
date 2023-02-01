@@ -44,7 +44,7 @@ bindkey '^r' peco-select-history
 setopt IGNORE_EOF
 # ghq
 function peco-ghq () {
-  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  local selected_dir=$(ghq list -p | peco)
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
     zle accept-line
@@ -68,6 +68,17 @@ function peco-chq () {
 }
 zle -N peco-chq
 bindkey '^f' peco-chq
+# oj
+function peco-oj () {
+  local selected_dir=$(ls -d $HOME/compro/contest/*/* | peco)
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-oj
+bindkey '^o' peco-oj
 # ================= end config for zsh =================
 
 # ================ begin general config ================
@@ -97,6 +108,10 @@ export ENVFILE_DIR=$HOME/.envfiles
 export ENVFILE_NAME=ctf.env.sh
 export GHIDRA_INSTALL_DIR=$HOME/bin/ghidra
 
+export CHQ_ROOT=$HOME/ctf/chq
+export OJHQ_ROOT=$HOME/compro/ojhq
+export LD_LIBRARY_PATH='/dev/null' # for gvm
+
 # alias
 alias ll='ls -alF'
 alias la='ls -A'
@@ -104,8 +119,13 @@ alias l='ls -CF'
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias clp='xclip -selection c'
 alias ghidra="$GHIDRA_INSTALL_DIR/ghidraRun"
-alias peco="peco --rcfile $HOME/.pecorc.json"
 alias tgdb="gdb --nx -ix=~/.gdbinit_tmux"
+alias rmd="rm -r ~/Downloads/*" # no -I option since zsh takes care of it
+
+alias peco="peco --rcfile $HOME/.pecorc.json"
+alias oj-prepare="oj-prepare --config-file $HOME/compro/oj-template/cs/config.toml"
+
+alias ojtcs='oj t -c "dotnet run"'
 
 # tmux
 if [[ -n "$TMUX" ]] then
@@ -119,5 +139,6 @@ fi
 
 # ============ begin config for application ============
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+# since gvm
 [[ -s "$HOME/templates/.bin/init.zsh" ]] && source "$HOME/templates/.bin/init.zsh"
 # ============= end config for application =============
