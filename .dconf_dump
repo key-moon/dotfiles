@@ -1,0 +1,442 @@
+[apps/seahorse/listing]
+keyrings-selected=['gnupg://']
+
+[apps/update-manager]
+first-run=false
+launch-count=14
+launch-time=int64 1678060961
+show-details=true
+window-height=400
+window-width=654
+
+[com/mattjakeman/ExtensionManager]
+last-used-version='0.3.0'
+
+[com/ubuntu/update-notifier]
+release-check-time=uint32 1677230381
+
+[org/gnome/Totem]
+active-plugins=['screenshot', 'apple-trailers', 'open-directory', 'vimeo', 'screensaver', 'recent', 'save-file', 'rotation', 'mpris', 'autoload-subtitles', 'skipto', 'movie-properties', 'variable-rate']
+subtitle-encoding='UTF-8'
+
+[org/gnome/calculator]
+accuracy=9
+angle-units='degrees'
+base=10
+button-mode='basic'
+number-format='automatic'
+show-thousands=false
+show-zeroes=false
+source-currency=''
+source-units='degree'
+target-currency=''
+target-units='radian'
+window-position=(26, 23)
+word-size=64
+
+[org/gnome/cheese]
+burst-delay=1000
+camera='Integrated Camera'
+photo-x-resolution=640
+photo-y-resolution=360
+video-x-resolution=640
+video-y-resolution=360
+
+[org/gnome/control-center]
+last-panel='sound'
+
+[org/gnome/deja-dup]
+backend='google'
+prompt-check='2023-03-05T12:28:51.562785Z'
+
+[org/gnome/desktop/app-folders]
+folder-children=['Utilities', 'YaST']
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['gnome-abrt.desktop', 'gnome-system-log.desktop', 'nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Connections.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Dictionary.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.eog.desktop', 'org.gnome.Evince.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.fonts.desktop', 'org.gnome.seahorse.Application.desktop', 'org.gnome.tweaks.desktop', 'org.gnome.Usage.desktop', 'vinagre.desktop']
+categories=['X-GNOME-Utilities']
+name='X-GNOME-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/input-sources]
+mru-sources=[('xkb', 'jp'), ('ibus', 'mozc-jp')]
+per-window=false
+sources=[('ibus', 'mozc-jp'), ('xkb', 'jp')]
+xkb-options=['grp_led:scroll']
+
+[org/gnome/desktop/interface]
+color-scheme='prefer-dark'
+font-hinting='slight'
+gtk-enable-primary-paste=false
+gtk-theme='Yaru-magenta-dark'
+icon-theme='Yaru-magenta'
+show-battery-percentage=true
+toolkit-accessibility=false
+
+[org/gnome/desktop/notifications]
+application-children=['gnome-power-panel', 'gnome-initial-setup', 'io-snapcraft-sessionagent', 'org-gnome-gedit', 'firefox-firefox', 'org-gnome-fileroller', 'org-gnome-nautilus', 'code', 'clipit', 'discord', 'org-gnome-dejadup', 'google-chrome', 'zoom', 'gnome-network-panel', 'org-gnome-evince']
+
+[org/gnome/desktop/notifications/application/clipit]
+application-id='clipit.desktop'
+
+[org/gnome/desktop/notifications/application/code]
+application-id='code.desktop'
+
+[org/gnome/desktop/notifications/application/discord]
+application-id='discord.desktop'
+
+[org/gnome/desktop/notifications/application/firefox-firefox]
+application-id='firefox_firefox.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-initial-setup]
+application-id='gnome-initial-setup.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-network-panel]
+application-id='gnome-network-panel.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/io-snapcraft-sessionagent]
+application-id='io.snapcraft.SessionAgent.desktop'
+
+[org/gnome/desktop/notifications/application/mountable-volume-f5a38df5-3d2a-476e-a706-941a84570725]
+application-id='mountable-volume:f5a38df5-3d2a-476e-a706-941a84570725.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-dejadup]
+application-id='org.gnome.DejaDup.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-evince]
+application-id='org.gnome.Evince.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-fileroller]
+application-id='org.gnome.FileRoller.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-gedit]
+application-id='org.gnome.gedit.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/snap-store-ubuntu-software]
+application-id='snap-store_ubuntu-software.desktop'
+
+[org/gnome/desktop/notifications/application/zoom]
+application-id='Zoom.desktop'
+
+[org/gnome/desktop/peripherals/keyboard]
+delay=uint32 212
+repeat-interval=uint32 28
+
+[org/gnome/desktop/peripherals/mouse]
+double-click=400
+speed=-0.066176470588235281
+
+[org/gnome/desktop/peripherals/tablets/056a:0374]
+mapping='absolute'
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='none'
+speed=-0.051470588235294157
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/privacy]
+report-technical-problems=true
+
+[org/gnome/desktop/remote-desktop/rdp]
+enable=true
+tls-cert='/home/keymoon/.local/share/gnome-remote-desktop/rdp-tls.crt'
+tls-key='/home/keymoon/.local/share/gnome-remote-desktop/rdp-tls.key'
+
+[org/gnome/desktop/screensaver]
+lock-delay=uint32 0
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
+
+[org/gnome/desktop/session]
+idle-delay=uint32 300
+
+[org/gnome/desktop/sound]
+allow-volume-above-100-percent=true
+event-sounds=true
+theme-name='__custom'
+
+[org/gnome/desktop/wm/keybindings]
+activate-window-menu=@as []
+panel-run-dialog=['<Super>r']
+
+[org/gnome/eog/view]
+background-color='rgb(0,0,0)'
+use-background-color=true
+
+[org/gnome/evince/default]
+continuous=true
+dual-page=false
+dual-page-odd-left=false
+enable-spellchecking=true
+fullscreen=false
+inverted-colors=false
+show-sidebar=true
+sidebar-page='thumbnails'
+sidebar-size=132
+sizing-mode='automatic'
+window-ratio=(1.5950653217066912, 1.1580673023106067)
+
+[org/gnome/evolution-data-server]
+migrated=true
+network-monitor-gio-name=''
+
+[org/gnome/file-roller/dialogs/extract]
+recreate-folders=true
+skip-newer=false
+
+[org/gnome/file-roller/listing]
+list-mode='as-folder'
+name-column-width=250
+show-path=false
+sort-method='name'
+sort-type='descending'
+
+[org/gnome/file-roller/ui]
+sidebar-width=200
+window-height=480
+window-width=600
+
+[org/gnome/gedit/plugins]
+active-plugins=['filebrowser', 'spell', 'modelines', 'openlinks', 'sort', 'docinfo']
+
+[org/gnome/gedit/plugins/filebrowser]
+root='file:///'
+tree-view=true
+virtual-root='file:///home/keymoon'
+
+[org/gnome/gedit/preferences/editor]
+display-overview-map=false
+scheme='Yaru-dark'
+use-default-font=false
+wrap-last-split-mode='char'
+wrap-mode='char'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/history-entry]
+replace-with-entry=['<h5>']
+search-for-entry=['*****', '<20>', 'katagaitai']
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(960, 1078)
+state=45952
+
+[org/gnome/gnome-system-monitor]
+maximized=false
+network-total-in-bits=false
+show-dependencies=false
+show-whose-processes='user'
+window-state=(1155, 865, 26, 23)
+
+[org/gnome/gnome-system-monitor/disktreenew]
+col-6-visible=true
+col-6-width=0
+
+[org/gnome/libgnomekbd/preview]
+height=611
+width=1464
+x=240
+y=150
+
+[org/gnome/mutter]
+experimental-features=@as []
+workspaces-only-on-primary=false
+
+[org/gnome/nautilus/compression]
+default-compression-format='zip'
+
+[org/gnome/nautilus/list-view]
+use-tree-view=false
+
+[org/gnome/nautilus/preferences]
+default-folder-viewer='icon-view'
+search-filter-time-type='last_modified'
+search-view='list-view'
+
+[org/gnome/nautilus/window-state]
+initial-size=(890, 912)
+maximized=false
+sidebar-width=209
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=false
+night-light-schedule-automatic=false
+night-light-schedule-from=12.0
+night-light-schedule-to=13.983333333333333
+night-light-temperature=uint32 2413
+
+[org/gnome/settings-daemon/plugins/media-keys]
+home=['<Super>e']
+search=['<Alt>space']
+
+[org/gnome/settings-daemon/plugins/power]
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+
+[org/gnome/shell]
+command-history=['calculate', 'Calculato', 'calclator', 'Calculator', 'calc', 'calculator']
+disable-user-extensions=false
+disabled-extensions=['caffeine@patapon.info', 'clipboard-indicator@tudmotu.com', 'pano@elhan.io']
+enabled-extensions=['clipboard-history@alexsaveau.dev']
+favorite-apps=['org.gnome.Nautilus.desktop', 'google-chrome.desktop', 'org.gnome.Terminal.desktop', 'gnome-control-center.desktop', 'org.gnome.gedit.desktop']
+had-bluetooth-devices-setup=true
+welcome-dialog-last-shown-version='42.2'
+
+[org/gnome/shell/extensions/caffeine]
+nightlight-control='never'
+user-enabled=false
+
+[org/gnome/shell/extensions/clipboard-history]
+display-mode=3
+history-size=1500
+strip-text=true
+toggle-menu=['<Super>v']
+window-width-percentage=25
+
+[org/gnome/shell/extensions/clipboard-indicator]
+clear-history=@as []
+disable-down-arrow=true
+display-mode=0
+next-entry=@as []
+prev-entry=@as []
+toggle-menu=['<Super>v']
+topbar-preview-size=10
+
+[org/gnome/shell/extensions/dash-to-dock]
+dash-max-icon-size=26
+dock-position='BOTTOM'
+multi-monitor=true
+show-mounts=false
+show-mounts-only-mounted=false
+
+[org/gnome/shell/keybindings]
+show-screenshot-ui=['<Shift><Super>s']
+toggle-message-tray=@as []
+
+[org/gnome/software]
+check-timestamp=int64 1678057971
+update-notification-timestamp=int64 1678019117
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gnome/terminal/legacy/keybindings]
+close-tab='disabled'
+
+[org/gnome/terminal/legacy/profiles:]
+default='b1dcc9dd-5262-4d8d-a863-c897e6d979b9'
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', 'b0f9fb1b-fcf7-40a6-90f0-fe72d5fa26d0', '134889c0-f26d-4af9-bc14-137aa070339c']
+
+[org/gnome/terminal/legacy/profiles:/:134889c0-f26d-4af9-bc14-137aa070339c]
+audible-bell=false
+background-color='rgb(0,0,0)'
+background-transparency-percent=6
+bold-is-bright=false
+cursor-blink-mode='on'
+cursor-shape='ibeam'
+custom-command='/home/keymoon/ghq/github.com/tmux/tmux/tmux'
+font='JetBrains Mono NL Medium 12'
+foreground-color='rgb(255,255,255)'
+login-shell=false
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+use-custom-command=true
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='tmux-dev'
+
+[org/gnome/terminal/legacy/profiles:/:b0f9fb1b-fcf7-40a6-90f0-fe72d5fa26d0]
+custom-command=''
+login-shell=false
+use-custom-command=false
+visible-name='bash'
+
+[org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+audible-bell=false
+background-color='rgb(0,0,0)'
+background-transparency-percent=13
+bold-is-bright=false
+cursor-blink-mode='on'
+cursor-shape='ibeam'
+custom-command='zsh -i -c tmux'
+font='JetBrains Mono NL 11'
+foreground-color='rgb(255,255,255)'
+login-shell=false
+palette=['rgb(7,54,66)', 'rgb(220,50,47)', 'rgb(133,153,0)', 'rgb(181,137,0)', 'rgb(38,139,210)', 'rgb(211,54,130)', 'rgb(42,161,152)', 'rgb(238,232,213)', 'rgb(0,43,54)', 'rgb(203,75,22)', 'rgb(88,110,117)', 'rgb(101,123,131)', 'rgb(131,148,150)', 'rgb(108,113,196)', 'rgb(147,161,161)', 'rgb(253,246,227)']
+use-custom-command=true
+use-system-font=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=true
+visible-name='tmux'
+
+[org/gtk/gtk4/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=218
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-size=(847, 376)
+
+[org/gtk/settings/color-chooser]
+custom-colors=[(0.86274509803921573, 0.19607843137254902, 0.18431372549019609, 1.0), (0.52156862745098043, 0.59999999999999998, 0.0, 1.0)]
+selected-color=(true, 0.86274509803921573, 0.19607843137254902, 0.18431372549019609, 1.0)
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=true
+show-size-column=true
+show-type-column=true
+sidebar-width=212
+sort-column='name'
+sort-directories-first=true
+sort-order='descending'
+type-format='category'
+window-position=(26, 23)
+window-size=(1203, 928)
+
+[org/yorba/shotwell/preferences/ui]
+display-basic-properties=true
+display-extended-properties=false
+display-photo-comments=false
+display-photo-ratings=true
+display-photo-tags=true
+display-photo-titles=false
+display-search-bar=false
+display-sidebar=true
+events-sort-ascending=false
+library-photos-sort-ascending=false
+library-photos-sort-by=2
+show-welcome-dialog=false
+sidebar-position=180
+
+[org/yorba/shotwell/preferences/window]
+library-height=768
+library-maximize=false
+library-width=1024
