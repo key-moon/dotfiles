@@ -20,8 +20,8 @@ setopt AUTO_PUSHD
 # keybind
 bindkey -e
 # completion
-fpath=('/home/keymoon/ghq/github.com/key-moon/chq/misc/zsh' $fpath)
-zstyle :compinstall filename '/home/keymoon/.zshrc'
+fpath=("$HOME/ghq/github.com/key-moon/chq/misc/zsh" $fpath)
+zstyle :compinstall filename "$HOME/.zshrc"
 autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select=5
@@ -57,7 +57,7 @@ bindkey '^g' peco-ghq
 function peco-chq () {
   local ctf=$(chq ctx ctf --hide-key 2> /dev/null)
   if [ -n "$ctf" ]; then
-    local ctf="$ctf/"
+    local ctf="$ctf/ "
   fi
   local selected_dir=$(chq list -p | peco --query "$ctf")
   if [ -n "$selected_dir" ]; then
@@ -125,8 +125,6 @@ alias rmd="rm -r ~/Downloads/*" # no -I option since zsh takes care of it
 alias peco="peco --rcfile $HOME/.pecorc.json"
 alias oj-prepare="oj-prepare --config-file $HOME/compro/oj-template/cs/config.toml"
 
-alias ojtcs='oj t -c "dotnet run"'
-
 # tmux
 if [[ -n "$TMUX" ]] then
   alias clear="clear; tmux clear-history"
@@ -138,7 +136,6 @@ fi
 # ================= end general config =================
 
 # ============ begin config for application ============
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-# since gvm
 [[ -s "$HOME/templates/.bin/init.zsh" ]] && source "$HOME/templates/.bin/init.zsh"
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 # ============= end config for application =============
