@@ -1,16 +1,26 @@
+# profile
+# zmodload zsh/zprof && zprof
+
 # ================ begin config for zsh ================
 # zplug
+compinit -C
+
+echo 'initializing...'
 source ~/.zplug/init.zsh
+
 zplug 'themes/alanpeabody', from:oh-my-zsh
 zplug 'zsh-users/zsh-syntax-highlighting'
 zplug 'zsh-users/zsh-completions'
 
+echo 'checking...'
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
         echo; zplug install
     fi
 fi
+
+echo 'loading...'
 zplug load
 
 # dirstack
@@ -123,6 +133,7 @@ alias tgdb="gdb --nx -ix=~/.gdbinit_tmux"
 alias rmd="rm -r ~/Downloads/*" # no -I option since zsh takes care of it
 
 alias peco="peco --rcfile $HOME/.pecorc.json"
+alias md-to-pdf="md-to-pdf --config-file $HOME/.md-to-pdf-config.js"
 alias oj-prepare="oj-prepare --config-file $HOME/compro/oj-template/cs/config.toml"
 
 # tmux
@@ -139,3 +150,6 @@ fi
 [[ -s "$HOME/templates/.bin/init.zsh" ]] && source "$HOME/templates/.bin/init.zsh"
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
 # ============= end config for application =============
+
+if (which zprof > /dev/null 2>&1) ;then; zprof; fi
+clear
