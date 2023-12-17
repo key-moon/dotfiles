@@ -12,6 +12,8 @@ zplug 'themes/alanpeabody', from:oh-my-zsh
 zplug 'zsh-users/zsh-syntax-highlighting'
 zplug 'zsh-users/zsh-completions'
 
+zplug "key-moon/md-env", use:"scripts/plugin.sh", hook-build:"npm install", at:"main"
+
 echo 'checking...'
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -30,10 +32,8 @@ setopt AUTO_PUSHD
 # keybind
 bindkey -e
 # completion
-fpath=("$HOME/ghq/github.com/key-moon/chq/misc/zsh" $fpath)
-zstyle :compinstall filename "$HOME/.zshrc"
-autoload -Uz compinit
-compinit
+# fpath=("$HOME/ghq/github.com/key-moon/chq/misc/zsh" $fpath)
+# zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' menu select=5
 zstyle ':completion:*:descriptions' format '%BCompleting%b %U%d%u'
 # history
@@ -133,7 +133,6 @@ alias tgdb="gdb --nx -ix=~/.gdbinit_tmux"
 alias rmd="rm -r ~/Downloads/*" # no -I option since zsh takes care of it
 
 alias peco="peco --rcfile $HOME/.pecorc.json"
-alias md-to-pdf="md-to-pdf --config-file $HOME/.md-to-pdf-config.js"
 alias oj-prepare="oj-prepare --config-file $HOME/compro/oj-template/cs/config.toml"
 
 # tmux

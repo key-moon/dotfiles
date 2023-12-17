@@ -1,10 +1,4 @@
-source ~/.pwndbg/gdbinit.py
-source ~/.pwngdb/pwngdb.py
-source ~/.pwngdb/angelheap/gdbinit.py
-
-define hook-run
-python
-import angelheap
-angelheap.init_angelheap()
-end
-end
+source /home/keymoon/ghq/github.com/key-moon/gdb-scripts/gdbinit.py
+# source /home/keymoon/ghq/github.com/key-moon/gdb-scripts/pwndbg/gdbinit.py
+source /home/keymoon/ghq/github.com/key-moon/gdb-scripts/postinit.py
+source /home/keymoon/ghq/github.com/key-moon/gdb-scripts/pwndbg/gdbinit.py
