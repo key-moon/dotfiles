@@ -135,6 +135,8 @@ alias rmd="rm -r ~/Downloads/*" # no -I option since zsh takes care of it
 alias peco="peco --rcfile $HOME/.pecorc.json"
 alias oj-prepare="oj-prepare --config-file $HOME/compro/oj-template/cs/config.toml"
 
+. ~/.zgh
+
 # tmux
 if [[ -n "$TMUX" ]] then
   alias clear="clear; tmux clear-history"
@@ -151,4 +153,5 @@ fi
 # ============= end config for application =============
 
 if (which zprof > /dev/null 2>&1) ;then; zprof; fi
+
 clear
