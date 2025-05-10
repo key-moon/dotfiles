@@ -111,6 +111,10 @@ alias less='less -r'
 # path
 export PATH=$PATH:$HOME/tools
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:/home/hikureia/.foundry/bin
+
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
 
 # environment variables
 # export TERM=xterm-256color
@@ -135,6 +139,8 @@ alias rmd="rm -r ~/Downloads/*" # no -I option since zsh takes care of it
 alias peco="peco --rcfile $HOME/.pecorc.json"
 alias oj-prepare="oj-prepare --config-file $HOME/compro/oj-template/cs/config.toml"
 
+alias dh="dreamhack"
+
 . ~/.zgh
 
 # tmux
@@ -155,3 +161,12 @@ fi
 if (which zprof > /dev/null 2>&1) ;then; zprof; fi
 
 clear
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/hikureia/.opam/opam-init/init.zsh' ]] || source '/home/hikureia/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration

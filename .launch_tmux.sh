@@ -11,5 +11,5 @@ if tmux ls; then
 else
  # server must spawned from zsh
   echo "launching..."
-  /bin/zsh -i -c tmux
+  /bin/zsh -l -i -c tmux
 fi

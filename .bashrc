@@ -119,3 +119,15 @@ fi
 [[ -s "/home/keymoon/.gvm/scripts/gvm" ]] && source "/home/keymoon/.gvm/scripts/gvm"
 . "$HOME/.cargo/env"
 
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export PATH="$PATH:/home/hikureia/.foundry/bin"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
